@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { loginUser } from '../api/auth'
 import { Link } from 'react-router-dom'
 import Signup from './Signup'
+import { Navigate } from 'react-router-dom'
 // import API from '../api/axios'
 // import { jwtDecode } from 'jwt-decode'
 
@@ -21,7 +22,9 @@ const Login = () => {
             // API.post('/auth/login', credentials)
                         // const decodedToken = jwtDecode(toke);
 
-                        window.location.href="/dashboard"
+                    const navigate = useNavigate();
+// login success hone ke baad:
+navigate('/dashboard');
 
   //               window.location.href =
   // res.data.user.role === "admin" ? "/admin" : "/dashboard";
