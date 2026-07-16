@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 const API = axios.create({
-    baseURL:"http://localhost:5000/api/auth"
+    baseURL:"https://app-backend-lemon.vercel.app/api/auth"
 })
 export const authHeader = () =>{
     const token = localStorage.getItem("token");
