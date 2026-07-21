@@ -7,6 +7,7 @@ import { Navigate } from 'react-router-dom'
 // import { jwtDecode } from 'jwt-decode'
 
 const Login = () => {
+     const navigate = useNavigate();
     const [form, setForm] = useState({
         email:"", password:""
     })
@@ -22,7 +23,7 @@ const Login = () => {
             // API.post('/auth/login', credentials)
                         // const decodedToken = jwtDecode(toke);
 
-                    const navigate = useNavigate();
+                   
 // login success hone ke baad:
 navigate('/dashboard');
 
